@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(152, 220, 220);
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: azure;
+    box-shadow: 0 0 10px rgba(188, 176, 176, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1f1b1b;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: rgb(21, 5, 5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5274da6c;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Your Details</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <label for="hear">How did you hear about us?</label>
+            <select id="hear" name="hear" required>
+                <option value="google">Google</option>
+                <option value="social-media">Social Media</option>
+                <option value="friend">Friend</option>
+                <option value="other">Other</option>
+            </select>
+
+            <p>Would you visit again?</p>
+            <label><input type="radio" name="visit" value="yes" required> Yes</label>
+            <label><input type="radio" name="visit" value="no"> No</label>
+            <label><input type="radio" name="visit" value="maybe"> Maybe</label>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <label><input type="checkbox" name="subscribe" value="yes"> Sign me up for email updates</label>
+
+            <button type="submit">Submit review</button>
+        </form>
+    </div>
+</body>
+</html>
